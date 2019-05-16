@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pomodoro</title>
+</head>
+
+<body>
+
+    <div class="all">
+        <div class="timecontainer">
+            <div class="work-time-container d-inline-block">
+                <div class="circleStatic" id="circle1"></div>
+                <div class="content">
+                    <h2 class="txt-white hmargin">Work Time</h2>
+                    <div class="stopwatch">
+                        <h2 class="txt-white d-inline-block" id="workHrs">0</h2>
+                        <h2 class="txt-white d-inline-block">:</h2>
+                        <h2 class="txt-white d-inline-block" id="workMins">0</h2>
+                        <h2 class="txt-white d-inline-block">:</h2>
+                        <h2 class="txt-white d-inline-block" id="workSecs">0</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="break-time-container d-inline-block">
+                <div class="circleStatic" id="circle2"></div>
+                <div class="content">
+                    <h2 class="txt-white hmargin">Break Time</h2>
+                    <div class="stopwatch">
+                        <h2 class="txt-white d-inline-block" id="breakMins">0</h2>
+                        <h2 class="txt-white d-inline-block">:</h2>
+                        <h2 class="txt-white d-inline-block" id="breakSecs">0</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Buttons -->
+        <div class="buttons">
+            <div class="work-btns d-inline-block">
+                <input type="button" value="Start Work" id="onStart" class="txt-white">
+                <input type="button" value="Resume Work" id="onResume" disabled class="txt-white not-allowed">
+            </div>
+            <div class="break-btns d-inline-block">
+                <input type="button" value="Start Break" id="onBreak" disabled class="txt-white not-allowed">
+                <input type="button" value="End Work" id="onEnd" disabled class="txt-white not-allowed">
+            </div>
+        </div>
+    </div>
+
+    <div class="estimated" id="msg">
+        <img src="tomato.png" alt="tomato" id="img">
+        <div class="text">
+            <h3 class="txt-green d-inline-block hmargin">Total Work Time:</h3>
+            <span class="txt-dark-gray bold" id="totalWork"></span>
+            <br> <br>
+            <h3 class="txt-green d-inline-block txt-red hidden" id="over">Over Break Time:</h3>
+            <span class="txt-dark-gray bold" id="totalBreak"></span>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
